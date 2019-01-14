@@ -2,5 +2,5 @@ node_modules
 .vscode-test/
 *.vsix
 .vscode
-.test
+.test/
 .DS_Store
