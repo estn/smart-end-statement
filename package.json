@@ -2,7 +2,7 @@
 	"name": "smart-end-statement",
 	"displayName": "smart-end-statement",
 	"description": "smart-end-statement",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"license": "GPL-3.0",
 	"publisher": "estnzuo",
 	"engines": {
@@ -12,7 +12,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:smart.end.statement"
+		"onCommand:smart.end.statement",
+		"onCommand:smart.max.view"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -20,6 +21,10 @@
 			{
 				"command": "smart.end.statement",
 				"title": "smart end statement"
+			},
+			{
+				"command": "smart.max.view",
+				"title": "smart max view"
 			}
 		]
 	},
@@ -29,6 +34,11 @@
 			"key": "shift+enter",
 			"mac": "shift+enter",
 			"when": "editorTextFocus"
+		},
+		{
+			"command": "smart.max.view",
+			"key": "cmd+m",
+			"mac": "cmd+m"
 		}
 	],
 	"scripts": {

@@ -16,12 +16,9 @@ function activate(context) {
 			if (text.charAt(lineLength - 1) !== ';' && !lineObject.isEmptyOrWhitespace) {
 				editor.edit((editBuilder) => {
 					console.log(text);
-					
-					console.log(isStartKeyword(text) , !isEnd(text));
-					
+					console.log(isStartKeyword(text) , isEnd(text));
+
 					if (isStartKeyword(text) && !isEnd(text)) {
-						console.log(1);
-						
 						editBuilder.insert(new vscode.Position(lineIndex, lineLength), '{')
 						editBuilder.insert(new vscode.Position(lineIndex, lineLength), '\n')
 						editBuilder.insert(new vscode.Position(lineIndex, lineLength), '}')
@@ -29,9 +26,7 @@ function activate(context) {
 					} 
 					
 					else if (isStartKeyword(text) && isEnd(text)) {
-						console.log(2);
-						
-						//是否需要新插入一行.
+						// should insert new line
 						var nextObject = editor.document.lineAt(lineIndex+1)
 						if(nextObject.isEmptyOrWhitespace){
 							vscode.commands.executeCommand('cursorDown')
@@ -41,8 +36,6 @@ function activate(context) {
 					} 
 					
 					else {
-						console.log(3);
-						
 						editBuilder.insert(new vscode.Position(lineIndex, lineLength), ';')
 						vscode.commands.executeCommand('cursorEnd')
 					}
@@ -56,7 +49,17 @@ function activate(context) {
 			return;
 		})
 	})
+
+
+	var maxDisposable = vscode.commands.registerCommand('smart.max.view',() => {
+		console.log(111);
+		vscode.commands.executeCommand("workbench.action.closePanel")
+		vscode.commands.executeCommand("workbench.action.toggleSidebarVisibility")
+	})
+
+
 	context.subscriptions.push(disposable)
+	context.subscriptions.push(maxDisposable)
 }
 
 function isStartKeyword(text) {
@@ -67,7 +70,7 @@ function isStartKeyword(text) {
 
 function isEnd(text) {
 	var length = text.length
-	console.log(text.charAt(length - 1));
+	text = text.trim()
 	if (text.charAt(length - 1) === "{") {
 		return true
 	}
