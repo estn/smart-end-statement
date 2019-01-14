@@ -23,6 +23,14 @@
 			}
 		]
 	},
+	"keybindings": [
+		{
+			"command": "smart.end.statement",
+			"key": "shift+enter",
+			"mac": "shift+enter",
+			"when": "editorTextFocus"
+		}
+	],
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "node ./node_modules/vscode/bin/test"
@@ -38,5 +46,6 @@
   },
   "bugs": {
     "url": "https://github.com/estn/smart-end-statement/issues"
-  }
+	},
+	"icon": "images/logo.png"
 }
