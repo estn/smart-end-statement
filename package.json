@@ -4,7 +4,7 @@
 	"description": "smart-end-statement",
 	"version": "0.0.3",
 	"license": "GPL-3.0",
-	"publisher": "estnzuo",
+	"publisher": "estn",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
@@ -57,5 +57,14 @@
   "bugs": {
     "url": "https://github.com/estn/smart-end-statement/issues"
 	},
-	"icon": "images/logo.png"
+	"icon": "images/logo.png",
+	"galleryBanner": {
+    "color": "#232323",
+    "theme": "dark"
+	},
+  "keywords": [
+    "semicolon",
+    "production",
+    "speed"
+  ]
 }
