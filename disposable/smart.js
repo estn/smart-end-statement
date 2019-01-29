@@ -9,11 +9,9 @@ const smart = vscode.commands.registerCommand('smart.end.statement', () => {
 
   vscode.commands.executeCommand('acceptSelectedSuggestion').then(() => {
     const languageId = editor.document.languageId;
-    console.log(languageId)
     switch (languageId) {
       case 'javascript':
       case 'javascriptreact':
-        console.log(111,languageId)
         javascript.hanldeJS(editor);
         break;
       case 'python':
