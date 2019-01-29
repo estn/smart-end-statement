@@ -1,70 +1,68 @@
 {
-	"name": "smart-end-statement",
-	"displayName": "smart-end-statement",
-	"description": "smart-end-statement",
-	"version": "0.0.3",
-	"license": "GPL-3.0",
-	"publisher": "estn",
-	"engines": {
-		"vscode": "^1.30.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:smart.end.statement",
-		"onCommand:smart.max.view"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "smart.end.statement",
-				"title": "smart end statement"
-			},
-			{
-				"command": "smart.max.view",
-				"title": "smart max view"
-			}
-		]
-	},
-	"keybindings": [
-		{
-			"command": "smart.end.statement",
-			"key": "shift+enter",
-			"mac": "shift+enter",
-			"when": "editorTextFocus"
-		},
-		{
-			"command": "smart.max.view",
-			"key": "cmd+m",
-			"mac": "cmd+m"
-		}
-	],
-	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"vscode": "^1.1.25",
-		"standard": "^8.6.0"
-	},
-	"homepage": "https://github.com/estn/smart-end-statement",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/estn/smart-end-statement"
-  },
-  "bugs": {
-    "url": "https://github.com/estn/smart-end-statement/issues"
-	},
-	"icon": "images/logo.png",
-	"galleryBanner": {
-    "color": "#232323",
-    "theme": "dark"
-	},
-  "keywords": [
-    "semicolon",
-    "production",
-    "speed"
-  ]
+    "name": "smart-end-statement",
+    "displayName": "smart-end-statement",
+    "description": "smart-end-statement",
+    "version": "0.0.7",
+    "license": "GPL-3.0",
+    "publisher": "estn",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:smart.end.statement",
+        "onCommand:smart.max.view"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [{
+                "command": "smart.end.statement",
+                "title": "smart end statement"
+            },
+            {
+                "command": "smart.max.view",
+                "title": "smart max view"
+            }
+        ]
+    },
+    "keybindings": [{
+            "command": "smart.end.statement",
+            "key": "shift+enter",
+            "mac": "shift+enter",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "smart.max.view",
+            "key": "cmd+m",
+            "mac": "cmd+m"
+        }
+    ],
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.25",
+        "standard": "^8.6.0"
+    },
+    "homepage": "https://github.com/estn/smart-end-statement",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/estn/smart-end-statement"
+    },
+    "bugs": {
+        "url": "https://github.com/estn/smart-end-statement/issues"
+    },
+    "icon": "images/logo.png",
+    "galleryBanner": {
+        "color": "#232323",
+        "theme": "dark"
+    },
+    "keywords": [
+        "semicolon",
+        "production",
+        "speed"
+    ]
 }
